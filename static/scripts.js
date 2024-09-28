@@ -1,22 +1,3 @@
-// document
-//   .getElementById("uploadForm")
-//   .addEventListener("submit", async function (event) {
-//     event.preventDefault();
-
-//     // console.log("Uploading image...");
-//     fetch(`/step_through/1`)
-//       .then((response) => response.text())
-//       .then((data) => {
-//         document.getElementById("frame").innerText = 1;
-//       })
-//       .catch((error) => console.error("Error:", error));
-//   });
-// document
-//   .getElementById("walk")
-//   .addEventListener("Click", async function (event) {
-//     event.preventDefault();
-//   });
-
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }

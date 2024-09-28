@@ -5,8 +5,6 @@ import os
 import numpy as np
 from PIL import Image
 from io import BytesIO
-# from sklearn.cluster import KMeans
-# from image_compression_impl import load_image, image_compression
 from kmeans_impl import KMeans
 import plotly.graph_objects as go
 import plotly.io as pio
@@ -14,16 +12,6 @@ import sklearn.datasets as datasets
 
 app = Flask(__name__)
 
-# Path to save uploaded files
-# UPLOAD_FOLDER = 'uploads'
-# app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-# # Create upload folder if it doesn't exist
-# if not os.path.exists(UPLOAD_FOLDER):
-#     os.makedirs(UPLOAD_FOLDER)
-
-# centers = [[0, 0], [2, 2], [-3, 2], [2, -4]]
-# X, y = datasets.make_blobs(n_samples=300, centers=centers, cluster_std=1, random_state=0)
 data = np.random.uniform(-10, 10, (300, 2))
 
 init_method = 'random'
@@ -103,9 +91,6 @@ def receive_data():
 		manual_points = points_list
 
 	return jsonify({"status": "success", "received_points": points_list})
-
-    # return jsonify({"status": "success", "received_points": points})
-
 
 @app.route('/run_to/')
 def run_to_converge():
